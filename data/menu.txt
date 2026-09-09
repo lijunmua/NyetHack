@@ -1,0 +1,3 @@
+点赞,good
+删除,delete
+拉黑,black
