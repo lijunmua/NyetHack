@@ -15,6 +15,9 @@ fun main() {
         english
     }
     list.forEach { println(it) }
+
+    val map = mapOf<String, String>("a" to "aa", "b" to "bb", "c" to "cc")
+    println(flipValues(map))
 }
 
 fun narrate(msg: String) {
@@ -28,4 +31,10 @@ val profile : (String) -> String = {
 // 类型推断
 val profile1 = { msg:String ->
     msg.uppercase() + "!".repeat(3)
+}
+
+fun flipValues(map:Map<String, String>): Map<String, String> {
+    val result = mutableMapOf<String, String>()
+    map.map { (k, v) -> result[v] = k }
+    return result
 }
